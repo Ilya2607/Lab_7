@@ -157,7 +157,7 @@ public class MainFrame extends JFrame {
                         // Выделяем IP-адрес
                         final String address = ((InetSocketAddress) socket.getRemoteSocketAddress()).getAddress().getHostAddress();
                         // Выводим сообщение в текстовую область
-                        textAreaIncoming.append(senderName + " (" + address + "): " + message + "\n");
+                        textAreaIncoming.append(senderName + " (" + address + "): " + message + "\n" + formatForDateNow.format(dateNow) +"\n\n");
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
