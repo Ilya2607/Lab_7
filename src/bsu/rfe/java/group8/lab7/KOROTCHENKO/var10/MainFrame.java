@@ -26,6 +26,9 @@ import javax.swing.SwingUtilities;
 import java.util.*;
 import java.text.*;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame {
     private static final String FRAME_TITLE = "Клиент мгновенных сообщений";
@@ -119,6 +122,9 @@ public class MainFrame extends JFrame {
                 .addComponent(sendButton)
                 .addContainerGap());
 
+        textAreaOutgoing.addKeyListener(new KeyAdapter() {
+            
+        });
 
         // Компоновка элементов фрейма
         final GroupLayout layout1 = new GroupLayout(getContentPane());
