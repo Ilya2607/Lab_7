@@ -23,6 +23,9 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+import java.util.*;
+import java.text.*;
+
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame {
     private static final String FRAME_TITLE = "Клиент мгновенных сообщений";
@@ -133,6 +136,8 @@ public class MainFrame extends JFrame {
                 .addComponent(messagePanel)
                 .addContainerGap());
 
+        Date dateNow = new Date();
+        SimpleDateFormat formatForDateNow = new SimpleDateFormat("hh:mm:ss a zzz");
 
         new Thread(new Runnable() {
             @Override
