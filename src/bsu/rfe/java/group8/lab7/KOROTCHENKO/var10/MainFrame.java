@@ -123,7 +123,12 @@ public class MainFrame extends JFrame {
                 .addContainerGap());
 
         textAreaOutgoing.addKeyListener(new KeyAdapter() {
-            
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER && e.isControlDown()) {
+                    sendMessage();
+                }
+            }
         });
 
         // Компоновка элементов фрейма
